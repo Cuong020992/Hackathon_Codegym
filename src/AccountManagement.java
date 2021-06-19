@@ -1,7 +1,7 @@
 import java.util.List;
 
-public class AccountManagement implements GerenalManagement<AccountUser> {
-    List<AccountUser> accountUserList;
+public class AccountManagement implements GerenalManagement<UserAccount> {
+    List<UserAccount> accountUserList;
     ScannerAccount scannerAccount = ScannerAccount.getInstance();
     public static final AccountManagement accountManagement = new AccountManagement();
 
@@ -10,20 +10,20 @@ public class AccountManagement implements GerenalManagement<AccountUser> {
     }
 
     @Override
-    public void display(List<AccountUser> list) {
-        for (AccountUser accountUser : list) {
+    public void display(List<UserAccount> list) {
+        for (UserAccount accountUser : list) {
             System.out.println(accountUser.toString());
         }
     }
 
     @Override
     public void add() {
-        AccountUser accountUser = scannerAccount.creat(accountUserList);
+        UserAccount accountUser = scannerAccount.creat(accountUserList);
         accountUserList.add(accountUser);
     }
 
     @Override
-    public void edit(AccountUser accountUser) {
+    public void edit(UserAccount accountUser) {
         scannerAccount.editPassword(accountUser);
         scannerAccount.editName(accountUser);
         scannerAccount.editAge(accountUser);
@@ -33,12 +33,12 @@ public class AccountManagement implements GerenalManagement<AccountUser> {
     }
 
     @Override
-    public void delete(AccountUser accountUser) {
+    public void delete(UserAccount accountUser) {
 
     }
 
     @Override
-    public List<AccountUser> find(String st) {
+    public List<UserAccount> find(String st) {
         return null;
     }
 }

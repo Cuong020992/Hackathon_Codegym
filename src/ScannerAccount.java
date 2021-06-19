@@ -10,8 +10,8 @@ public class ScannerAccount {
         return scannerAccount;
     }
 
-    public boolean checkExistAccount(String userName, List<AccountUser> list) {
-        for (AccountUser accountUser : list) {
+    public boolean checkExistAccount(String userName, List<UserAccount> list) {
+        for (UserAccount accountUser : list) {
             if (accountUser.getUserName().equalsIgnoreCase(userName)) {
                 return true;
             }
@@ -35,7 +35,7 @@ public class ScannerAccount {
         return num;
     }
 
-    public AccountUser creat(List<AccountUser> list) {
+    public UserAccount creat(List<UserAccount> list) {
         boolean checkExist = true;
         String userName = null;
         do {
@@ -67,11 +67,11 @@ public class ScannerAccount {
         String address = sc.nextLine();
         System.out.println("Số điện thoại :");
         String phoneNumber = sc.nextLine();
-        return new AccountUser(userName, passwork, fullName, age, gender, address, phoneNumber);
+        return new UserAccount(userName, passwork, fullName, age, gender, address, phoneNumber);
 
     }
 
-    public void editPassword(AccountUser accountUser) {
+    public void editPassword(UserAccount accountUser) {
         System.out.println("Mật nhập :");
         String password = sc.nextLine();
         System.out.println("Bạn có muốn tiếp tục đổi mật khẩu?(Nhập vào Y để tiếp tục)");
@@ -81,19 +81,19 @@ public class ScannerAccount {
         }
     }
 
-    public void editName(AccountUser accountUser) {
+    public void editName(UserAccount accountUser) {
         System.out.println("Nhập họ tên mới :");
         String name = sc.nextLine();
         accountUser.setFullname(name);
     }
 
-    public void editAge(AccountUser accountUser) {
+    public void editAge(UserAccount accountUser) {
         System.out.println("Nhập tuổi:");
         int age = inputNum();
         accountUser.setAge(age);
     }
 
-    public void editGender(AccountUser accountUser) {
+    public void editGender(UserAccount accountUser) {
         System.out.println("Giới tính:");
         String gender = null;
         boolean checkGender = true;
@@ -108,13 +108,13 @@ public class ScannerAccount {
         accountUser.setGender(gender);
     }
 
-    public void editAddress(AccountUser accountUser) {
+    public void editAddress(UserAccount accountUser) {
         System.out.println("Nhập địa chỉ:");
         String address = sc.nextLine();
         accountUser.setAddress(address);
     }
 
-    public void editPhoneNumber(AccountUser accountUser) {
+    public void editPhoneNumber(UserAccount accountUser) {
         System.out.println("Nhập số điện thoại");
         String phoneNumber = sc.nextLine();
         accountUser.setPhoneNumber(phoneNumber);

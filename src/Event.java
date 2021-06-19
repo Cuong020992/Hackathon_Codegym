@@ -9,7 +9,7 @@ public class Event {
     private String sport;
     private String des;
     private int maxPerson;
-    private List<AccountUser> quantity=new ArrayList<>();
+    private List<UserAccount> quantity=new ArrayList<>();
     private String status=quantity.size()+"/"+maxPerson;
 
     public Event() {
@@ -25,11 +25,11 @@ public class Event {
         this.maxPerson=maxPerson;
     }
 
-    public List<AccountUser> getQuantity() {
+    public List<UserAccount> getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(List<AccountUser> quantity) {
+    public void setQuantity(List<UserAccount> quantity) {
         this.quantity = quantity;
     }
 
@@ -107,8 +107,6 @@ public class Event {
                 ", address='" + address + '\'' +
                 ", sport='" + sport + '\'' +
                 ", des='" + des + '\'' +
-                ", maxPerson=" + maxPerson +
-                ", quantity=" + quantity +
                 ", status='" + status + '\'' +
                 '}';
     }

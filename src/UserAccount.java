@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-public class AccountUser {
+public class UserAccount {
     private String userName;
     private String password;
     private String fullname;
@@ -12,7 +12,6 @@ public class AccountUser {
     private String address;
     private String phoneNumber;
     private String[] listsothich;
-    private List<Event> eventList=new ArrayList<>();
 
     public String getUserName() {
         return userName;
@@ -78,7 +77,7 @@ public class AccountUser {
         this.listsothich = listsothich;
     }
 
-    public AccountUser(String userName, String password, String fullname, int age, String gender, String address, String phoneNumber) {
+    public UserAccount(String userName, String password, String fullname, int age, String gender, String address, String phoneNumber) {
         this.userName = userName;
         this.password = password;
         this.fullname = fullname;
@@ -88,7 +87,7 @@ public class AccountUser {
         this.phoneNumber = phoneNumber;
     }
 
-    public AccountUser() {
+    public UserAccount() {
     }
 
     @Override
