@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class ScannerAccount {
     Scanner sc = new Scanner(System.in);
+    public static final ScannerAccount scannerAccount = new ScannerAccount();
+
+    public static ScannerAccount getInstance() {
+        return scannerAccount;
+    }
 
     public boolean checkExistAccount(String userName, List<AccountUser> list) {
         for (AccountUser accountUser : list) {
@@ -75,19 +80,22 @@ public class ScannerAccount {
             accountUser.setPassword(password);
         }
     }
-    public void editName(AccountUser accountUser){
+
+    public void editName(AccountUser accountUser) {
         System.out.println("Nhập họ tên mới :");
-        String name=sc.nextLine();
+        String name = sc.nextLine();
         accountUser.setFullname(name);
     }
-    public void editAge(AccountUser accountUser){
+
+    public void editAge(AccountUser accountUser) {
         System.out.println("Nhập tuổi:");
-        int age=inputNum();
+        int age = inputNum();
         accountUser.setAge(age);
     }
-    public void editGender(AccountUser accountUser){
+
+    public void editGender(AccountUser accountUser) {
         System.out.println("Giới tính:");
-        String gender=null;
+        String gender = null;
         boolean checkGender = true;
         while (checkGender == true) {
             System.out.println("Giới tính(Nam/Nữ):");
@@ -99,14 +107,16 @@ public class ScannerAccount {
         }
         accountUser.setGender(gender);
     }
-    public void editAddress(AccountUser accountUser){
+
+    public void editAddress(AccountUser accountUser) {
         System.out.println("Nhập địa chỉ:");
-        String address=sc.nextLine();
+        String address = sc.nextLine();
         accountUser.setAddress(address);
     }
-    public void editPhoneNumber(AccountUser accountUser){
+
+    public void editPhoneNumber(AccountUser accountUser) {
         System.out.println("Nhập số điện thoại");
-        String phoneNumber=sc.nextLine();
+        String phoneNumber = sc.nextLine();
         accountUser.setPhoneNumber(phoneNumber);
     }
 }

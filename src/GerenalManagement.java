@@ -3,7 +3,7 @@ import java.util.List;
 public interface GerenalManagement<T> {
     void display(List<T> list);
 
-    void add(T t);
+    void add();
 
     void edit(T t);
 
